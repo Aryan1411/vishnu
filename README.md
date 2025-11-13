@@ -1,17 +1,20 @@
 # Vishnu — Civil Aviation Pilot Portfolio
 
 ## Overview
-A lightweight, aesthetic, single-page portfolio website for Vishnu, a professional pilot in civil aviation with more than 4 years of flying experience. The site highlights experience, operational proficiency, certifications, and provides quick contact options.
+A single-page, offline-friendly portfolio for Vishnu, a professional civil aviation pilot with 4+ years of flying experience. The page features an aesthetic animated sky background with drifting clouds by day, stars and moon by night, and tasteful planes flying across the horizon. It is responsive, fast, and accessible, with a built-in light/dark theme toggle.
 
 Key features:
-- Elegant aviation-themed design (animated clouds by day, stars by night)
-- Responsive layout that works across desktop and mobile
-- Accessible and keyboard-friendly UI
-- Dark/light theme toggle with local preference storage
-- No external dependencies for fast loads and offline-friendly usage
+- Animated sky background:
+  - Day: gradient sky, sun, drifting clouds
+  - Night: deep sky gradient, moon, twinkling stars
+  - Subtle planes cruising with contrails in the background
+- Responsive layout for desktop and mobile
+- Accessible navigation with keyboard and screen-reader-friendly markup
+- Theme toggle with local preference storage
+- No external dependencies; loads quickly and works offline
 
 ## Setup
-No build tools are required.
+No build tools or external assets are required.
 
 - Option 1: Double-click index.html to open in any modern browser.
 - Option 2: Serve locally for best results:
@@ -19,20 +22,33 @@ No build tools are required.
   - Node: npx serve
   - Then visit http://localhost:8080
 
-All assets are inline; there are no external network requests, ensuring the page loads quickly.
+Everything is inline; there are no network requests.
 
 ## Usage
 - Navigate via the header links to About, Experience, Skills, Certifications, and Contact.
-- Theme toggle: Click “Theme” to switch between light and dark modes; your preference is saved.
+- Theme toggle:
+  - Click “Theme” to switch between light and dark modes; your choice is saved.
+  - The sky adapts automatically (sun/clouds by day, moon/stars by night).
 - Contact:
-  - The “Email Vishnu” button uses a mailto link. Replace vishnu@example.com with the correct address in index.html (two places: Contact section and footer) and in the JSON-LD script if you wish.
-  - Update the social links (LinkedIn/Resume) in the Contact section by replacing the placeholder href="#" values.
-- CV download: The “Download CV” button is a placeholder. Replace its href="#" with a valid file path (e.g., ./assets/Vishnu_CV.pdf) and ensure the file exists.
-- Content customization: All text is within index.html. Search for sections by their IDs (#about, #experience, #skills, #certs, #contact) and update as needed.
+  - Email: Replace vishnu@example.com in two places (About and Contact sections) and in the footer, and optionally in the JSON-LD script.
+  - Replace the placeholder links (LinkedIn/Resume) with real URLs.
+- CV: Update the “Download CV/Resume” buttons to point to a valid file (e.g., ./Vishnu_CV.pdf).
 
 Performance tips:
-- Keep everything inline as provided for optimal load time.
-- If adding images, compress them and consider using modern formats (WebP/SVG).
+- Keep the app inline as provided for best load times.
+- If you add images, compress them (WebP/SVG recommended).
+- Animations honor reduced motion: users with prefers-reduced-motion will see fewer/simpler animations.
+
+## Improvements in Round 2
+From the previous version, the background has been significantly enhanced to better reflect a living sky scene:
+- New animated sky with layered gradient, sun by day and moon by night
+- Procedurally generated twinkling stars at night
+- Soft, drifting clouds with parallax-like motion
+- Animated airplanes cruising across the background with subtle contrails
+- Performance-conscious spawning and automatic pausing when tab is hidden
+- Respects prefers-reduced-motion to reduce visual movement when requested
+
+All prior features remain: responsive layout, accessible navigation, theme toggle with saved preference, no external dependencies, and fast load times.
 
 ## License
 MIT License
